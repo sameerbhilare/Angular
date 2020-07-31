@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <!-- Add a Form with the following Inputs (and Validators)
+           1) Mail address (should not be empty and should be an email address)
+           2) A Dropdown which allows the user to select from three different Subscriptions ("Basic", "Advanced", "Pro")
+              Set "Advanced" as Default
+           3) A Password field (should not be empty)
+           4) A Submit Button
+
+           Display a warning message if the Form is invalid AND was touched. Display a warning message below each input if it's invalid.
+
+           Upon submitting the form, you should simply print the Value of the Form to the Console.
+           Optionally, display it in your template.
+      -->
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text"
+                 class="form-control"
+                 ngModel
+                 name="email"
+                 #email="ngModel"
+                 required
+                 email>
+          <span class="help-block" *ngIf="email.touched && !email.valid">Email is invalid</span>
+        </div>
+        <div class="form-group">
+          <label for="email">Subscriptions</label>
+          <select class="form-control"
+                  [ngModel]="defaultSubscription"
+                  name="subscription">
+            <option *ngFor="let subscription of subscriptions" [value]="subscription">{{subscription}}</option>
+            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password"
+                 class="form-control"
+                 ngModel
+                 name="password"
+                 #password="ngModel"
+                 required>
+          <span *ngIf="password.touched && !password.valid" class="help-block">Password is invalid</span>
+        </div>
+
+        <button class="btn btn-primary"
+                type="submit"
+                [disabled]="!f.valid">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
