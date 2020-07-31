@@ -1,0 +1,97 @@
+
+Syntax - 
+1. String Interpolation: {{ }}
+2. Property binding:  []	
+3. Event Binding: ()
+4. Two-way data binding: [()]
+5. Decorators: @
+	e.g. @Input(), @Component(), etc.
+6. Local References:  #
+	#serverName
+
+TODO - 
+1. Angular Glossary
+2. Recap
+
+We should only use EventEmitter only when it is decoreded with @Output. 
+And if you want to manually subscribe to any event we should use "Subject".
+
+Any data or information that controls what should be visible on the screen - that is State.
+
+Redux is state management pattern. It is also a library which helps you implement that pattern into any application.
+NgRx is Angular's implmentation of Redux.
+
+Any Action you dispatch, always reaches to all reducers.
+
+=====================================================================================================================================
+Angular Universal -
+
+To Activate Angular Universal in your project- 
+Aproach 1: (Build into Angular)
+1. ng add @nguniversal/express-engine --clientProject <projectname from angular.json file>
+Now you have option of running your code on server and getting that prerendering stuff (Server side rendering of your application).
+2. npm run build:ssr
+3. npm run serve:ssr
+
+Aproach 2: (Using NestJS)
+1. ng add @nestjs/ng-universal
+This cmnd will ask for name of the application to continue. Use <projectname from angular.json file>
+2. npm run build:ssr
+3. npm run serve:ssr
+
+
+Once you setup Angular Universal, your code is NOW first rendered and executed on the server not in the browser. 
+So the first page/first load is rendered on the server.
+only after that first page has been rendered on the server and returned to the user, 
+only then normal single page application sarts to run in the browser of the user.
+Implication of this is - certain browser only APIs are not available (on the server). e.g. localstorage is browser only API.
+
+https://angular.io/guide/universal
+A normal Angular application executes in the browser, rendering pages in the DOM in response to user actions. 
+Angular Universal executes on the server, generating static application pages that later get bootstrapped on the client. 
+This means that the application generally renders more quickly, giving users a chance to view the application layout before it becomes fully interactive.
+
+There are three main reasons to create a Universal version of your app -
+1. Facilitate web crawlers through search engine optimization (SEO) (https://support.google.com/webmasters/answer/7451184?hl=en)
+2. Improve performance on mobile and low-powered devices
+3. Show the first page quickly with a first-contentful paint (FCP) (https://web.dev/first-contentful-paint/)
+
+You typically use Angular Universal to pre-render Angular pages on the server. 
+Once the app then runs on the client, it's a normal SPA again.
+
+Server-side rendering (SSR) can make sense because of SEO(Search Engine Optimization) considerations (crawler should see what your users see) 
+or because you want to deliver a finished page to your users (rather than creating the page in the browser).
+
+But that also has one important implication: You MUST NOT use any browser-only APIs like document.querySelector() in your Angular code! 
+Simply because it will execute on the server and there, such APIs are not available.
+That's why, It is recommended to use Angular features only: These features are safe to use 
+because Angular will check if a certain API can be used before it uses it.
+
+=====================================================================================================================================
+   
+tsconfig - responsible for compiling our typescript code to javascript. 
+
+Angular Elements - It's a feature of Angular framework which allows you to turn your normal Angular components which you use in yout angular app
+into native web components. 
+Web components are custom html elements that are part of the DOM or the javascript API (They not releated to Angular).  
+and you can use them in vanilla javascript apps or apps built with other frameworks.
+   
+   
+Firebase
+https://ng-complete-guide-6197a.firebaseio.com/
+https://console.firebase.google.com/project/ng-complete-guide-6197a/database/ng-complete-guide-6197a/data/~2F
+
+
+https://ng-course-recipe-book-f2477.web.app/
+
+Questions - 
+
+1. Where can we use Local references(e.g. #serverName)? .html(template), .ts?
+Ans. only inside that template(.html)
+
+2. To which differnet elements we ca use Local references?
+Ans. To any HTML element we can use it.
+
+3. Difference between ActivateRoute and ActivateRouteSnapshot?
+
+4. Difference between RouterState and RouterStateSnapshot?
