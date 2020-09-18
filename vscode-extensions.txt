@@ -1,0 +1,31 @@
+Visual Studio Code Extentions - 
+
+1. Angular Essentials (Version 9)
+   by John Papa
+   
+2. Angular Language Service
+   by Angular
+   
+3. Angular Snippets (Version 9)
+   by John Papa
+
+4. Darcula Theme
+   by rokoroku
+   
+5. Debugger for Chrome
+   by Microsoft
+   
+6. Debugger for Microsoft Edge
+   by Microsoft
+   
+7. HTML CSS Support
+   by ecmel
+   
+8. Material Icon Theme
+   by Philipp Kief
+   
+9. Prettier - Code formatter
+   by Prettier
+   
+10. Peacock
+    by John Papa
