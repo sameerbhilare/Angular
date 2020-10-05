@@ -25,7 +25,14 @@ Visual Studio Code Extentions -
    by Philipp Kief
    
 9. Prettier - Code formatter
-   by Prettier
+   by Prettier.
+   Note: To format on Save, please set "editor.formatOnSave": true
    
 10. Peacock
     by John Papa
+	
+11. CSS Peek
+	to see CSS code right from the html, just pressing ctrl + mouse click/hover on the class
+	
+12. Auto Rename Tag
+	It renames the end tag if start tag is changed.
