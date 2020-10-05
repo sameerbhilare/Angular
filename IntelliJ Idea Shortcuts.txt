@@ -1,0 +1,45 @@
+IntelliJ Idea shortcuts
+
+shift + shift		to search for all types of files
+ctrl + N			to search for Java classes
+ctrl + shift + N	to search for non java files e.g. .properties, .yml, etc.
+ctrl + shift + F 	to search in path (Find in path/directory/project). Very powerful
+ctrl + F12			to see file structure (e.g. see methods/variables in a Class)
+	ctrl + F12		to see inheritated members inside this class
+	ctrl + I		to see Anonymous classes in this class
+	ctrl + L		to see lambda expressions used in this class
+ctrl + Alt + H		to see call Hierarchy of a method/variable. (use if we want to see entire call hierarchy to see the origin)
+Alt+ F7				to find usages of a method/variable. (use it if we just want to see references)
+
+Open/close Windows (Alt + <number in front of the window>)
+Alt + 1				to open/close project structure window (1:Project)
+Alt + <number in front of the window>	to toggle that window
+Alt + 9				to open/close GIT window (9:Git)
+Shift + F12			to reset default layout
+ctrl + Akt + S		project settings
+Alt + Left or Right arrow	- to switch between opened files.
+
+Alt + Insert		to show context menu on given point. 
+					(on project structure, it will show corresponding context menu)
+					(In Java class, it will show corr. context menu e.g. to create constructor, getter, setter, test, toString, etc.)
+Ctrl + Alt + V		to extract/create/introduce inline variable (for given string)
+Ctrl + Alt + M		to extract/create a method for selected lines of code
+Ctrl + Alt + P		to extract/introduce a parameter for selected variable/string
+Ctrl + Alt + N		to remove inline variable/method and replace with underlying string/method body
+
+Ctrl + Shift + T	Go to Tests or create new Test. OR If you are aleady in the test class, goes back to the test subject class.
+					
+Ctrl + F8			to toggle(set/remove) line breakpoint.
+Alt + Shift + F9	to start debug 
+F9					resume code running
+F8					step over
+F7					step into
+
+ctrl + K			GIT Commit/push changes dialog
+Alt + `				To see all GIT operations context menu
+
+ctrl + W			extend selection of words. very helpful.
+ctrl + Y			to delete a line
+ctrl + D 			to duplicate a line or selection. (kind of copy paste)
+
+ctrl + O			to override methods in a class (shows list of methods which can be overridden)
