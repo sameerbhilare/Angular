@@ -3,6 +3,7 @@ import { NgRedux, select } from '@angular-redux/store';
 import { IAppState } from './store';
 import { INCREMENT } from './actions';
 import { Observable } from 'rxjs';
+import { Map } from 'immutable';
 
 @Component({
   selector: 'app-root',
@@ -18,9 +19,9 @@ export class AppComponent {
   If we use different variable in the component, we have to pass exact state variable in the select decorator.
   E.g. @select('counter') count: Observable<IAppState>;
   */
-  @select() counter: Observable<IAppState>;
+  @select((s) => s.get('counter')) counter;
 
-  constructor(private ngRedux: NgRedux<IAppState>) {
+  constructor(private ngRedux: NgRedux<Map<string, any>>) {
     // Approach 1: tedious
     /*
     this.ngRedux.subscribe(() => {
